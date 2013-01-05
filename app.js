@@ -3,14 +3,16 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path');
+var express = require('express'),
+    http = require('http'),
+    path = require('path'),
+    routes = require('./routes/main.js');
+
 
 var app = express();
 
+
+// 色々な設定
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -23,13 +25,17 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+// 開発時限定の設定
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
 
+// ルーティング(イベントバインディング)
+app.get('/', routes.index);
+
+
+// サーバー起動
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });

@@ -1,0 +1,220 @@
+
+
+/*
+    コンパイルは views/scss/　にて
+    compass compile
+     または
+    compass watch
+*/
+
+
+@charset "utf-8";
+@import "compass";
+
+@import "animateProperty";// to use ↓
+@import "animate";// from https://github.com/ericam/compass-animate
+@include animate-tada();
+
+
+
+
+//---------------------------------------------------
+//         ぱらめーた
+//---------------------------------------------------
+$PREFIX_TYPES:  -webkit-, -moz-, -ms-, -o-, '';
+$IMAGE_DIR: '../images/';
+
+$body_backgroundUrl: $IMAGE_DIR + "bookParts/woodtable.jpg";
+$backGroundImage_Size:cover;
+
+//titleRow
+$title_margin-top:105px;
+$title_margin-bottom:46px;
+$title_margin-left:71px;
+
+//本の大きさによって調節するパラメータ
+$book_MarginTop:0px;
+$book_MarginLeft:0%;
+$book_width: 1786px/2;
+$book_height : 1223px/2;
+	$pageBox_top : 34px/2;
+	$pageBox_left :33px;//66px/2;
+	$pageBox_width : 829px;//1658px/2;
+	$pageBox_height :578px; //1156px/2;
+
+
+
+
+
+
+//---------------------------------------------------
+//         mixin
+//---------------------------------------------------
+
+//自動的にベンダープレフィックスを追加するmixin
+// 例 → @include addPrefix( border-radius, 15px );
+@mixin addPrefix( $property , $value ){
+		@each $prefix in $PREFIX_TYPES{
+				#{$prefix}#{$property} : $value;
+		}
+}
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------
+//          基本のレイアウト
+//---------------------------------------------------
+
+body{
+	background:url($body_backgroundUrl) repeat;
+	background-size: $backGroundImage_Size;
+  font-family: "Take Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#titleRow{
+	margin-top:$title_margin-top;
+	margin-left:$title_margin-left;
+}
+#subtitleRow{
+	margin-left:$title_margin-left;
+	margin-bottom:$title_margin-bottom;
+}
+
+#book{
+	//margin-left:$book_MarginLeft;
+	//margin-top:$book_MarginTop;
+	#bookImg{
+		position: absolute;
+		height: $book_height;
+		width: $book_width;
+	}
+	#pageBox{
+		position: absolute;
+		top: $pageBox_top;
+		left: $pageBox_left;
+		width: $pageBox_width;
+		height: $pageBox_height;
+
+		.page{
+			.pageBgImg{
+				height:$pageBox_height;
+				width:$pageBox_width/2;
+			}
+			.pageContent{
+				position:absolute;
+				top:0;
+				left:0;
+				height:$pageBox_height;
+				width:$pageBox_width/2;
+				overflow:hidden;
+			}
+		}
+	.rightPage{
+		@include border-radius( 0 15px 15px 0 );
+		.pageBgImg{@include border-radius( 0 15px 15px 0 );}
+		.pageContent{}
+	  }
+	.leftPage{
+		@include border-radius( 15px 0 0 15px );
+		.pageBgImg{@include border-radius( 15px 0 0 15px );}
+		.pageContent{}
+	}
+	}
+}
+footer{
+	height: 400px;
+}
+
+
+
+
+//---------------------------------------------------
+//         ヘッダーのデザイン
+//---------------------------------------------------
+.pageHeader{
+	p.date{
+    font-size: 35px;
+    margin: 12px;
+    margin-left: 22px;
+    font-family: Courier New;
+    line-height: 54px;
+    //border: 1px dotted gray;
+	}
+}
+
+// ガイド用(結構ズレる)
+*{
+  //border:1px dashed rgba(255,255,255, 0.23);
+}
+
+//---------------------------------------------------
+//         アイテムのデザイン
+//---------------------------------------------------
+div.itemBox{
+  //border:2px solid red;
+  margin-left:12px;
+  //全体設定
+  div.item{
+    display: inline-block;
+    max-width:166px;
+    margin: 5px;
+    padding:0px;
+    @include addPrefix( border-radius, 2px );
+    background-color:rgba(0, 0, 0, 0.3);
+
+    p.time{
+      margin: -4px;
+      padding:-3px;
+      margin-right:10px;
+      margin-bottom:3px;
+      font-size: 8px;
+      color:gray;
+      //border: 1px solid pink;
+      text-align:right;
+    }
+    img.serviceIcon{
+      float: left;
+      //border: 1px solid orange;
+      padding-right:3px;
+      padding-bottom:0px;
+      margin-top: -17px;
+      margin-left: -21px;
+    }
+    p.message{
+      margin: 3px;
+      padding:0px;
+      //border: 1px solid blue;
+      font-size:10px;
+    }
+    div.rightTextBlock{
+      //border: 1px solid red;
+      display: inline-block;
+      font-size:12px;
+    }
+  }
+
+  // twitter
+  div.item.twitter{
+    //border: 2px solid cyan;
+    background-color:rgb(192, 205, 213);
+    padding: 10px;
+    p.time{
+      color: rgba(111, 114, 116, 0.93);
+    }
+    p.message{
+      color:rgb(20, 81, 116);
+    }
+  }
+}
+
+
+
+
+
+
