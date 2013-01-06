@@ -334,32 +334,32 @@
   }
 }
 
-/* line 74, ../../views/sass/index.scss */
+/* line 71, ../../views/sass/index.scss */
 body {
   background: url("../images/bookParts/woodtable.jpg") repeat;
   background-size: cover;
   font-family: "Take Light","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/* line 80, ../../views/sass/index.scss */
+/* line 77, ../../views/sass/index.scss */
 #titleRow {
   margin-top: 105px;
   margin-left: 71px;
 }
 
-/* line 84, ../../views/sass/index.scss */
+/* line 81, ../../views/sass/index.scss */
 #subtitleRow {
   margin-left: 71px;
   margin-bottom: 46px;
 }
 
-/* line 92, ../../views/sass/index.scss */
+/* line 89, ../../views/sass/index.scss */
 #book #bookImg {
   position: absolute;
   height: 611.5px;
   width: 893px;
 }
-/* line 97, ../../views/sass/index.scss */
+/* line 94, ../../views/sass/index.scss */
 #book #pageBox {
   position: absolute;
   top: 17px;
@@ -367,12 +367,12 @@ body {
   width: 829px;
   height: 578px;
 }
-/* line 105, ../../views/sass/index.scss */
+/* line 102, ../../views/sass/index.scss */
 #book #pageBox .page .pageBgImg {
   height: 578px;
   width: 414.5px;
 }
-/* line 109, ../../views/sass/index.scss */
+/* line 106, ../../views/sass/index.scss */
 #book #pageBox .page .pageContent {
   position: absolute;
   top: 0;
@@ -381,7 +381,7 @@ body {
   width: 414.5px;
   overflow: hidden;
 }
-/* line 118, ../../views/sass/index.scss */
+/* line 115, ../../views/sass/index.scss */
 #book #pageBox .rightPage {
   -webkit-border-radius: 0 15px 15px 0;
   -moz-border-radius: 0 15px 15px 0;
@@ -389,7 +389,7 @@ body {
   -o-border-radius: 0 15px 15px 0;
   border-radius: 0 15px 15px 0;
 }
-/* line 120, ../../views/sass/index.scss */
+/* line 117, ../../views/sass/index.scss */
 #book #pageBox .rightPage .pageBgImg {
   -webkit-border-radius: 0 15px 15px 0;
   -moz-border-radius: 0 15px 15px 0;
@@ -397,7 +397,7 @@ body {
   -o-border-radius: 0 15px 15px 0;
   border-radius: 0 15px 15px 0;
 }
-/* line 123, ../../views/sass/index.scss */
+/* line 120, ../../views/sass/index.scss */
 #book #pageBox .leftPage {
   -webkit-border-radius: 15px 0 0 15px;
   -moz-border-radius: 15px 0 0 15px;
@@ -405,7 +405,7 @@ body {
   -o-border-radius: 15px 0 0 15px;
   border-radius: 15px 0 0 15px;
 }
-/* line 125, ../../views/sass/index.scss */
+/* line 122, ../../views/sass/index.scss */
 #book #pageBox .leftPage .pageBgImg {
   -webkit-border-radius: 15px 0 0 15px;
   -moz-border-radius: 15px 0 0 15px;
@@ -414,12 +414,12 @@ body {
   border-radius: 15px 0 0 15px;
 }
 
-/* line 130, ../../views/sass/index.scss */
+/* line 127, ../../views/sass/index.scss */
 footer {
   height: 400px;
 }
 
-/* line 141, ../../views/sass/index.scss */
+/* line 138, ../../views/sass/index.scss */
 .pageHeader p.date {
   font-size: 35px;
   margin: 12px;
@@ -428,11 +428,11 @@ footer {
   line-height: 54px;
 }
 
-/* line 159, ../../views/sass/index.scss */
+/* line 156, ../../views/sass/index.scss */
 div.itemBox {
   margin-left: 12px;
 }
-/* line 163, ../../views/sass/index.scss */
+/* line 160, ../../views/sass/index.scss */
 div.itemBox div.item {
   display: inline-block;
   max-width: 166px;
@@ -445,7 +445,7 @@ div.itemBox div.item {
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.3);
 }
-/* line 171, ../../views/sass/index.scss */
+/* line 168, ../../views/sass/index.scss */
 div.itemBox div.item p.time {
   margin: -4px;
   padding: -3px;
@@ -455,7 +455,7 @@ div.itemBox div.item p.time {
   color: gray;
   text-align: right;
 }
-/* line 181, ../../views/sass/index.scss */
+/* line 178, ../../views/sass/index.scss */
 div.itemBox div.item img.serviceIcon {
   float: left;
   padding-right: 3px;
@@ -463,27 +463,27 @@ div.itemBox div.item img.serviceIcon {
   margin-top: -17px;
   margin-left: -21px;
 }
-/* line 189, ../../views/sass/index.scss */
+/* line 186, ../../views/sass/index.scss */
 div.itemBox div.item p.message {
   margin: 3px;
   padding: 0px;
   font-size: 10px;
 }
-/* line 195, ../../views/sass/index.scss */
+/* line 192, ../../views/sass/index.scss */
 div.itemBox div.item div.rightTextBlock {
   display: inline-block;
   font-size: 12px;
 }
-/* line 203, ../../views/sass/index.scss */
+/* line 200, ../../views/sass/index.scss */
 div.itemBox div.item.twitter {
   background-color: #c0cdd5;
   padding: 10px;
 }
-/* line 207, ../../views/sass/index.scss */
+/* line 204, ../../views/sass/index.scss */
 div.itemBox div.item.twitter p.time {
   color: rgba(111, 114, 116, 0.93);
 }
-/* line 210, ../../views/sass/index.scss */
+/* line 207, ../../views/sass/index.scss */
 div.itemBox div.item.twitter p.message {
   color: #145174;
 }
