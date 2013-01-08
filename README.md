@@ -5,4 +5,9 @@
 
 #使用技術
 * CoffeeScript
-* SCSS
+* Compass
+* Jade
+
+# node.js
+* Express
+* mongoose
